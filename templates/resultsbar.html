@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+
+{% block content1 %}
+
+
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+      google.charts.load('current', {packages: ['corechart', 'bar']});
+google.charts.setOnLoadCallback(drawBasic);
+
+function drawBasic() {
+
+      var arr = {{ data|safe }};
+        console.log(arr);
+      var data = google.visualization.arrayToDataTable(arr);
+
+      var options = {
+        title: 'Population',
+        chartArea: {width: '50%'},
+        hAxis: {
+          title: 'Size',
+          minValue: 0
+        },
+        vAxis: {
+          title: 'Magnitude Range'
+        }
+      };
+
+      var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+
+      chart.draw(data, options);
+    }
+
+</script>
+{% endblock %}
+
+{% block content %}
+
+<div id="chart_div" style="width: 900px; height: 500px;"></div>
+
+ <a href="/"><input class="button3" type="button" value="Home"></a> <br>
+{% endblock %}

@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block content1 %}
+
+
+{% block content %}
+
+
+Question 5-Bar graph
+<p>
+
+ <form action="/splitbar" method="get">
+	 split<input type="text" name="split" maxlength="200" width="60"><br/>
+    Year<input type="text" name="year" maxlength="200" width="60"><br/>
+	<p>Please wait as it might take a while to load</p>
+	<input type="submit" value="Bar Graph"><br/><br/>
+</form>
+
+
+
+Question 6-Pie
+<p>
+
+ <form action="/splitpie" method="get">
+	 split<input type="text" name="split" maxlength="200" width="60"><br/>
+    Year<input type="text" name="year" maxlength="200" width="60"><br/>
+	<p>Please wait as it might take a while to load</p>
+	<input type="submit" value="Pie Chart"><br/><br/>
+</form>
+
+
+Question 7-Scatter plot
+<p>
+
+ <form action="/splitsc" method="get">
+	Year Range from<input type="text" name="year1" maxlength="200" width="60"> <br/>
+ 	Year Range to<input type="text" name="year2" maxlength="200" width="60"><br/>
+    State<input type="text" name="split" maxlength="200" width="60"><br/>
+	<p>Please wait as it might take a while to load</p>
+	<input type="submit" value="Scatter Plot"><br/><br/>
+</form>
+
+
+{% endblock %}
+
+
+
+<!--
+Query 1
+<p>
+ <form action="/multiplerun1" method="get">
+	Depth Range from<input type="text" name="rangefrom" maxlength="200" width="60"> <br/>
+ 	Depth Range To<input type="text" name="rangeto" maxlength="200" width="60"><br/>
+	Latitude<input type="text" name="lat" maxlength="200" width="60"><br/>
+  <input type="submit" value="Submit"><br/><br/>
+</form>
+</p>
+
+query2
+<p>
+
+ <form action="/multiplerun" method="get">
+	Depth Range from<input type="text" name="rangefrom" maxlength="200" width="60"> <br/>
+ 	Depth Range to<input type="text" name="rangeto" maxlength="200" width="60"><br/>
+	Number of queries to run:<input type="text" name="nom" maxlength="200" width="60"></br>
+   <input type="submit" value="run query n times"><br/><br/>
+</form>
+</p>
+
+query3
+<p>
+
+ <form action="/multiplerun123" method="get">
+	Depth Range from<input type="text" name="rangefrom" maxlength="200" width="60"> <br/>
+ 	Depth Range to<input type="text" name="rangeto" maxlength="200" width="60"><br/>
+	Number of queries to run:<input type="text" name="nom" maxlength="200" width="60"></br>
+   <input type="submit" value="run query n times"><br/><br/>
+</form>
+</p>
+query4
+<p>
+
+ <form action="/multiplerun567" method="get">
+	Depth Range from<input type="text" name="rangefrom" maxlength="200" width="60"> <br/>
+ 	Depth Range to<input type="text" name="rangeto" maxlength="200" width="60"><br/>
+	Number of queries to run:<input type="text" name="nom" maxlength="200" width="60"></br>
+   <input type="submit" value="run query n times"><br/><br/>
+</form>
+</p>
+
+
+
+
+
